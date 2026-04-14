@@ -8,7 +8,7 @@ const processSteps = [
   { label: "Sorting", desc: "Fiber identification", detail: "Advanced NIR (Near-Infrared) sorting technology identifies polyester-rich textiles, separating them by fiber composition and color for optimal processing." },
   { label: "Shredding", desc: "Mechanical processing", detail: "Sorted textiles are mechanically shredded into small flakes, removing hardware (buttons, zippers) and non-polyester contaminants." },
   { label: "Melting", desc: "Thermal processing", detail: "Shredded polyester flakes are melted at controlled temperatures, creating a homogeneous polymer melt ready for purification." },
-  { label: "Gen II TMR™", desc: "Proprietary purification", detail: "Our proprietary Thermo-Mechanical Recycling technology removes dyes, coatings, and micro-contaminants — producing virgin-equivalent polymer quality." },
+  { label: "Gen II TMR™", desc: "Proprietary purification", detail: "Our proprietary Thermo-Mechanical Recycling technology removes dyes, coatings, and micro-{ label: "Gen II TMR™", desc: "Proprietary purification", detail: "Our proprietary Thermo-Mechanical Recycling technology removes dyes, coatings, and micro-contaminants, producing virgin-equivalent polymer quality." }, virgin-equivalent polymer quality." },
   { label: "Filtration", desc: "Quality assurance", detail: "Multi-stage filtration removes remaining micro-particles, ensuring consistent IV (Intrinsic Viscosity) and color specifications for downstream use." },
   { label: "Pelletization", desc: "Final product", detail: "Purified polymer is extruded and pelletized into rPET chips — ready for fiber spinning, yarn production, or direct fabric manufacturing." },
 ];
@@ -28,7 +28,7 @@ export default function WhatIsTex2Tex() {
   return (
     <DeckSection id="what-is-tex2tex">
       <div className="text-center mb-6">
-        <p className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3">Our Technology</p>
+        <p className="text-xs font-mono text-muted-foreground tracking-widest uppercase mb-3">Our Technology</p>
         <h2 className="text-2xl md:text-4xl font-bold text-foreground">
           Tex2Tex<sup className="text-base">®</sup> TMR™ Process
         </h2>

@@ -20,7 +20,7 @@ export default function ExecutiveSummary() {
           transition={{ duration: 0.5 }}
         >
           <p className="text-foreground leading-relaxed text-sm mb-6">
-            Earth Protex™ is developing a <strong>30,000 ton/year greenfield polyester textile-to-textile recycling facility</strong> in Gujarat, India. Using our proprietary <strong>TMR™ (Thermo-Mechanical Recycling)</strong> technology, we convert post-consumer and post-industrial textile waste into high-quality recycled polyester pellets — suitable for fiber, yarn, and fabric production.
+            Earth Protex™ is developing a <strong>30,000 ton/year greenfield polyester textile-to-textile recycling facility</strong> in Gujarat, India. Using our proprietary <strong>TMR™ (Thermo-Mechanical Recycling)</strong> technology, we convert post-consumer and post-industrial textile waste into high-quality recycled polyester Earth Protex™ is developing a <strong>30,000 ton/year greenfield polyester textile-to-textile recycling facility</strong> in Gujarat, India. Using our proprietary <strong>TMR™ (Thermo-Mechanical Recycling)</strong> technology, we convert post-consumer and post-industrial textile waste into high-quality recycled polyester pellets, suitable for fiber, yarn, and fabric production., yarn, and fabric production.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-6">
             <div>

@@ -114,7 +114,7 @@ export default function HeroCover() {
           className="mt-8 sm:mt-14"
         >
           <a
-            href="#executive-summary"
+            href="#why-tex2tex"
             className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors duration-300 border-b border-white/20 pb-1 hover:border-white/50"
           >
             Explore the deck
@@ -137,7 +137,7 @@ export default function HeroCover() {
             earthprotex.com <ExternalLink className="w-3 h-3" />
           </a>
         </div>
-        <span>Confidential — Q2 2026</span>
+        <span><span>Confidential · Q2 2026</span></span>
       </motion.div>
 
       {/* Scroll indicator */}
