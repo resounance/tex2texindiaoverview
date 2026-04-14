@@ -8,6 +8,7 @@ import MarketOpportunity from "@/components/deck/MarketOpportunity";
 
 import InvestmentOverview from "@/components/deck/InvestmentOverview";
 import StickyNav from "@/components/deck/StickyNav";
+import Footer from "@/components/deck/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -31,8 +32,8 @@ function Index() {
       <TheProblem />
       <WhatIsTex2Tex />
       <MarketOpportunity />
-      
       <InvestmentOverview />
+      <Footer />
     </div>
   );
 }
