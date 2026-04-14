@@ -6,7 +6,7 @@ const sections = [
   { id: "the-problem", label: "The Problem" },
   { id: "what-is-tex2tex", label: "Technology" },
   { id: "market", label: "Market" },
-  { id: "activities", label: "Activities" },
+  
   { id: "investment", label: "Investment" },
 ];
 
