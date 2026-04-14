@@ -1,0 +1,133 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowDown, ExternalLink } from "lucide-react";
+import { useRef } from "react";
+
+export default function HeroCover() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 0.4], ["0%", "-8%"]);
+
+  return (
+    <section ref={sectionRef} data-slide-index="0" className="relative h-screen overflow-hidden bg-deck-charcoal">
+      {/* Gradient background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-deck-charcoal via-deck-charcoal to-secondary/20" />
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-secondary/10 to-transparent" />
+      </div>
+
+      {/* Dark overlay */}
+      <motion.div
+        className="absolute inset-0 z-[1] bg-black/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      />
+
+      {/* Content */}
+      <motion.div
+        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6"
+        style={{ opacity: contentOpacity, y: contentY }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="flex flex-col items-center mb-10"
+        >
+          <h2 className="text-white text-3xl md:text-5xl font-bold tracking-tight">
+            Tex2Tex<sup className="text-lg md:text-2xl">®</sup>
+          </h2>
+          <span className="text-secondary text-xs font-mono tracking-[0.4em] uppercase mt-3">by Earth Protex™</span>
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="font-black uppercase text-white leading-[0.95] tracking-tight"
+          style={{ fontSize: "clamp(1.5rem, 5vw, 4.5rem)" }}
+        >
+          <span className="block">India Greenfield</span>
+          <span className="block">Polyester Textile-to-Textile</span>
+          <span className="block">Recycling Facility</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="text-white/50 text-xs sm:text-sm md:text-base max-w-lg mt-6 sm:mt-8 leading-relaxed font-light tracking-wide px-4 sm:px-0"
+        >
+          The world's first large-scale, true textile-to-textile polyester recycling facility
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
+          className="flex items-center gap-6 sm:gap-8 md:gap-12 mt-8 sm:mt-12"
+        >
+          {[
+            { value: "30K", unit: "Tons/yr" },
+            { value: "33%", unit: "IRR" },
+            { value: "<$10M", unit: "Capex" },
+          ].map((stat) => (
+            <div key={stat.unit} className="text-center">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight">{stat.value}</p>
+              <p className="text-[10px] font-mono uppercase tracking-widest text-white/30 mt-1">{stat.unit}</p>
+            </div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.3 }}
+          className="mt-8 sm:mt-14"
+        >
+          <a
+            href="#executive-summary"
+            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors duration-300 border-b border-white/20 pb-1 hover:border-white/50"
+          >
+            Explore the deck
+          </a>
+        </motion.div>
+      </motion.div>
+
+      {/* Bottom bar */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.6 }}
+        className="absolute bottom-0 left-0 right-0 z-10 px-4 sm:px-6 md:px-12 pb-4 sm:pb-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-[11px] text-white/25 font-mono"
+      >
+        <div className="flex items-center gap-4">
+          <a href="https://tex2tex.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-white/50 transition-colors">
+            tex2tex.com <ExternalLink className="w-3 h-3" />
+          </a>
+          <a href="https://earthprotex.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-white/50 transition-colors">
+            earthprotex.com <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
+        <span>Confidential — Q2 2026</span>
+      </motion.div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.8, duration: 0.6 }}
+        className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+      >
+        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
+          <ArrowDown className="w-4 h-4 text-white/20" />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
