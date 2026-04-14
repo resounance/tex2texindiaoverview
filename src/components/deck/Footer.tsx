@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import tex2texLogo from "@/assets/tex2tex-logo.svg";
 
 export default function Footer() {
   return (
@@ -6,9 +7,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
           <div>
-            <h3 className="font-bold text-foreground text-sm mb-3">
-              Tex2Tex<sup className="text-[8px]">®</sup> by Earth Protex™
-            </h3>
+            <img src={tex2texLogo} alt="Tex2Tex® by Earth Protex™" className="h-8 mb-3 brightness-0 invert opacity-80" />
             <p className="text-xs text-muted-foreground leading-relaxed">
               The world's first large-scale, true textile-to-textile polyester recycling facility. Gujarat, India.
             </p>
@@ -53,7 +52,7 @@ export default function Footer() {
             This document is confidential and intended solely for the use of the individual or entity to whom it is addressed. It contains proprietary information of Earth Protex™ and may not be reproduced, distributed, or disclosed without prior written consent. The information presented herein is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities.
           </p>
           <p className="text-[10px] text-muted-foreground/40 mt-4">
-            © 2026 Earth Protex™. All rights reserved. Tex2Tex® and TMR™ are trademarks of Earth Protex.. All rights reserved. Tex2Tex® and TMR™ are trademarks of Earth Protex.
+            © 2026 Earth Protex™. All rights reserved. Tex2Tex® and TMR™ are trademarks of Earth Protex.
           </p>
         </div>
       </div>

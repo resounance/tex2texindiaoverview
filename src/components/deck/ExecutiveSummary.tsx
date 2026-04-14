@@ -43,7 +43,7 @@ export default function ExecutiveSummary() {
           <div>
             <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">TMR™ Output</p>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center px-4 pt-2 pb-1 rounded-full bg-primary text-primary-foreground font-semibold text-xs">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary text-primary-foreground font-semibold text-xs">
                 Textile Waste
               </span>
               <span className="text-muted-foreground text-lg">→</span>
