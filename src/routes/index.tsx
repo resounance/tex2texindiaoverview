@@ -26,8 +26,8 @@ function Index() {
     <div className="min-h-screen bg-background">
       <StickyNav />
       <HeroCover />
-      <ExecutiveSummary />
       <WhyTex2Tex />
+      <ExecutiveSummary />
       <TheProblem />
       <WhatIsTex2Tex />
       <MarketOpportunity />
