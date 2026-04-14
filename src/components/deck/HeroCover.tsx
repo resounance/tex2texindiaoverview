@@ -20,13 +20,24 @@ export default function HeroCover() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <iframe
           src="https://player.vimeo.com/video/1176418295?autoplay=1&loop=1&muted=1&badge=0&autopause=0&title=0&byline=0&portrait=0&controls=0&player_id=0&app_id=58479"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-0 pointer-events-none"
-          style={{
-            width: isMobile ? "300vw" : "177.78vh",
-            height: isMobile ? "100vh" : "56.25vw",
-            minWidth: "100%",
-            minHeight: "100%",
-          }}
+          className="absolute top-1/2 left-1/2 border-0 pointer-events-none"
+          style={
+            isMobile
+              ? {
+                  width: "300vw",
+                  height: "100vh",
+                  minWidth: "177.78vh",
+                  minHeight: "100vh",
+                  transform: "translate(-50%, -50%) scale(1.25)",
+                }
+              : {
+                  width: "177.78vh",
+                  height: "56.25vw",
+                  minWidth: "100%",
+                  minHeight: "100%",
+                  transform: "translate(-50%, -50%) scale(1.25)",
+                }
+          }
           allow="autoplay; fullscreen; picture-in-picture"
           title="Tex2Tex Background Video"
         />
