@@ -47,9 +47,9 @@ export default function ExecutiveSummary() {
                 Textile Waste
               </span>
               <span className="text-muted-foreground text-lg">→</span>
-              <span className="deck-badge-teal">rPET Pellets</span>
-              <span className="deck-badge-teal">Fiber</span>
-              <span className="deck-badge-teal">Yarn</span>
+              <span className="deck-badge-teal text-sm">rPET Pellets</span>
+              <span className="deck-badge-teal text-sm">Fiber</span>
+              <span className="deck-badge-teal text-sm">Yarn</span>
             </div>
           </div>
         </motion.div>
