@@ -5,7 +5,7 @@ import WhyTex2Tex from "@/components/deck/WhyTex2Tex";
 import TheProblem from "@/components/deck/TheProblem";
 import WhatIsTex2Tex from "@/components/deck/WhatIsTex2Tex";
 import MarketOpportunity from "@/components/deck/MarketOpportunity";
-import KeyActivities from "@/components/deck/KeyActivities";
+
 import InvestmentOverview from "@/components/deck/InvestmentOverview";
 import StickyNav from "@/components/deck/StickyNav";
 
@@ -31,7 +31,7 @@ function Index() {
       <TheProblem />
       <WhatIsTex2Tex />
       <MarketOpportunity />
-      <KeyActivities />
+      
       <InvestmentOverview />
     </div>
   );
