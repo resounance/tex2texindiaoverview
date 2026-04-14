@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ExternalLink } from "lucide-react";
 import { useRef } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import tex2texLogo from "@/assets/tex2tex-logo-dark.svg";
 
 export default function HeroCover() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -62,10 +63,7 @@ export default function HeroCover() {
           transition={{ duration: 1, delay: 0.3 }}
           className="flex flex-col items-center mb-10"
         >
-          <h2 className="text-white text-3xl md:text-5xl font-bold tracking-tight">
-            Tex2Tex<sup className="text-lg md:text-2xl">®</sup>
-          </h2>
-          <span className="text-secondary text-xs font-mono tracking-[0.4em] uppercase mt-3">by Earth Protex™</span>
+          <img src={tex2texLogo} alt="Tex2Tex® by Earth Protex™" className="h-16 md:h-24 w-auto brightness-0 invert opacity-90" />
         </motion.div>
 
         <motion.h1

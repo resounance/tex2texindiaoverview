@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import tex2texLogo from "@/assets/tex2tex-logo-dark.svg";
 
 const sections = [
   { id: "why-tex2tex", label: "Why Tex2Tex®" },
@@ -68,9 +69,7 @@ export default function StickyNav() {
           />
 
           <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-12">
-            <span className="font-bold text-sm text-foreground">
-              Tex2Tex<sup className="text-[8px]">®</sup>
-            </span>
+            <img src={tex2texLogo} alt="Tex2Tex® by Earth Protex™" className="h-6 w-auto" />
             <div className="hidden md:flex items-center gap-6">
               {sections.map((s) => (
                 <a
