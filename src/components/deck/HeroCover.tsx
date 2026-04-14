@@ -1,9 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ExternalLink } from "lucide-react";
 import { useRef } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function HeroCover() {
   const sectionRef = useRef<HTMLElement>(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
@@ -14,15 +16,25 @@ export default function HeroCover() {
 
   return (
     <section ref={sectionRef} data-slide-index="0" className="relative h-screen overflow-hidden bg-deck-charcoal">
-      {/* Gradient background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-deck-charcoal via-deck-charcoal to-secondary/20" />
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-secondary/10 to-transparent" />
+      {/* Video background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <iframe
+          src="https://player.vimeo.com/video/1176418295?autoplay=1&loop=1&muted=1&badge=0&autopause=0&title=0&byline=0&portrait=0&controls=0&player_id=0&app_id=58479"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-0 pointer-events-none"
+          style={{
+            width: isMobile ? "300vw" : "177.78vh",
+            height: isMobile ? "100vh" : "56.25vw",
+            minWidth: "100%",
+            minHeight: "100%",
+          }}
+          allow="autoplay; fullscreen; picture-in-picture"
+          title="Tex2Tex Background Video"
+        />
       </div>
 
       {/* Dark overlay */}
       <motion.div
-        className="absolute inset-0 z-[1] bg-black/30"
+        className="absolute inset-0 z-[1] bg-black/50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
