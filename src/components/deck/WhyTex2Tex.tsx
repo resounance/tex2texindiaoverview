@@ -17,12 +17,12 @@ const advantages = [
   {
     icon: Leaf,
     title: "Lowest Impact Polyester in the Marketplace",
-    desc: "Independently verified by 3rd party Life Cycle Assessment (LCA) — our Tex2Tex® pellets have the lowest environmental footprint of any polyester on the market.",
+    desc: "Independently verified by 3rd party Life Cycle Assessment (LCA). Our Tex2Tex® pellets have the lowest environmental footprint of any polyester on the market.",
   },
   {
     icon: Recycle,
-    title: "Closing the Loop — 100% from Textile Waste",
-    desc: "No virgin material or bottle flake inputs. 100% sourced from post-consumer and post-industrial textile waste — true circular textile-to-textile recycling.",
+    title: "Closing the Loop: 100% from Textile Waste",
+    desc: "No virgin material or bottle flake inputs. 100% sourced from post-consumer and post-industrial textile waste, enabling true circular textile-to-textile recycling.",
   },
 ];
 

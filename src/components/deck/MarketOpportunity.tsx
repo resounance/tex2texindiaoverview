@@ -15,7 +15,7 @@ export default function MarketOpportunity() {
     <DeckSection id="market" bg="muted">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-6">
-          <p className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3">Market Opportunity</p>
+          <p className="text-xs font-mono text-muted-foreground tracking-widest uppercase mb-3">Market Opportunity</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">Polyester Market Opportunity</h2>
         </div>
 
@@ -73,7 +73,7 @@ export default function MarketOpportunity() {
               <p className="text-sm text-muted-foreground mt-1">Addressable Market</p>
             </div>
           </div>
-          <p className="text-xs text-muted-foreground mt-6 italic">"The rPET market is severely undersupplied — brands are desperate for non-bottle sources."</p>
+          <p className="text-xs text-muted-foreground mt-6 italic">"The rPET market is severely <p className="text-xs text-muted-foreground mt-6 italic">"The rPET market is severely undersupplied. Brands are desperate for non-bottle sources."</p> are desperate for non-bottle sources."</p>
         </div>
       </div>
     </DeckSection>

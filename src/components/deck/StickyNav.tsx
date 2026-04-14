@@ -3,10 +3,10 @@ import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 
 const sections = [
   { id: "why-tex2tex", label: "Why Tex2Tex®" },
+  { id: "executive-summary", label: "Summary" },
   { id: "the-problem", label: "The Problem" },
   { id: "what-is-tex2tex", label: "Technology" },
   { id: "market", label: "Market" },
-  
   { id: "investment", label: "Investment" },
 ];
 
