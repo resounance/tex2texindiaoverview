@@ -53,7 +53,7 @@ export default function Footer() {
             This document is confidential and intended solely for the use of the individual or entity to whom it is addressed. It contains proprietary information of Earth Protex™ and may not be reproduced, distributed, or disclosed without prior written consent. The information presented herein is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities.
           </p>
           <p className="text-[10px] text-muted-foreground/40 mt-4">
-            © {new Date().getFullYear()} Earth Protex™. All rights reserved. Tex2Tex® and TMR™ are trademarks of Earth Protex.
+            © 2026 Earth Protex™. All rights reserved. Tex2Tex® and TMR™ are trademarks of Earth Protex.. All rights reserved. Tex2Tex® and TMR™ are trademarks of Earth Protex.
           </p>
         </div>
       </div>
