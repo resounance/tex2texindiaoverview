@@ -3,14 +3,14 @@ import { ArrowRight, ChevronDown, Truck, ScanLine, Scissors, Flame, Sparkles, Fi
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const processSteps: { label: string; desc: string; detail: string; icon: LucideIcon }[] = [
-  { icon: Truck, label: "Collection", desc: "Textile waste sourcing", detail: "Post-consumer and post-industrial textile waste is collected from garment factories, sorting centers, and municipal waste streams across India." },
-  { icon: ScanLine, label: "Sorting", desc: "Fiber identification", detail: "Advanced NIR (Near-Infrared) sorting technology identifies polyester-rich textiles, separating them by fiber composition and color for optimal processing." },
-  { icon: Scissors, label: "Shredding", desc: "Mechanical processing", detail: "Sorted textiles are mechanically shredded into small flakes, removing hardware (buttons, zippers) and non-polyester contaminants." },
-  { icon: Flame, label: "Melting", desc: "Thermal processing", detail: "Shredded polyester flakes are melted at controlled temperatures, creating a homogeneous polymer melt ready for purification." },
-  { icon: Sparkles, label: "Gen II TMR™", desc: "Proprietary purification", detail: "Our proprietary Thermo-Mechanical Recycling technology removes dyes, coatings, and micro-contaminants, producing virgin-equivalent polymer quality." },
-  { icon: Filter, label: "Filtration", desc: "Quality assurance", detail: "Multi-stage filtration removes remaining micro-particles, ensuring consistent IV (Intrinsic Viscosity) and color specifications for downstream use." },
-  { icon: CircleDot, label: "Pelletization", desc: "Final product", detail: "Purified polymer is extruded and pelletized into rPET chips, ready for fiber spinning, yarn production, or direct fabric manufacturing." },
+const processSteps: { label: string; desc: string; detail: string; icon: LucideIcon; color: string; activeBg: string }[] = [
+  { icon: Truck, label: "Collection", desc: "Textile waste sourcing", detail: "Post-consumer and post-industrial textile waste is collected from garment factories, sorting centers, and municipal waste streams across India.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
+  { icon: ScanLine, label: "Sorting", desc: "Fiber identification", detail: "Advanced NIR (Near-Infrared) sorting technology identifies polyester-rich textiles, separating them by fiber composition and color for optimal processing.", color: "text-secondary", activeBg: "bg-secondary" },
+  { icon: Scissors, label: "Shredding", desc: "Mechanical processing", detail: "Sorted textiles are mechanically shredded into small flakes, removing hardware (buttons, zippers) and non-polyester contaminants.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
+  { icon: Flame, label: "Melting", desc: "Thermal processing", detail: "Shredded polyester flakes are melted at controlled temperatures, creating a homogeneous polymer melt ready for purification.", color: "text-secondary", activeBg: "bg-secondary" },
+  { icon: Sparkles, label: "Gen II TMR™", desc: "Proprietary purification", detail: "Our proprietary Thermo-Mechanical Recycling technology removes dyes, coatings, and micro-contaminants, producing virgin-equivalent polymer quality.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
+  { icon: Filter, label: "Filtration", desc: "Quality assurance", detail: "Multi-stage filtration removes remaining micro-particles, ensuring consistent IV (Intrinsic Viscosity) and color specifications for downstream use.", color: "text-secondary", activeBg: "bg-secondary" },
+  { icon: CircleDot, label: "Pelletization", desc: "Final product", detail: "Purified polymer is extruded and pelletized into rPET chips, ready for fiber spinning, yarn production, or direct fabric manufacturing.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
 ];
 
 export default function WhatIsTex2Tex() {
