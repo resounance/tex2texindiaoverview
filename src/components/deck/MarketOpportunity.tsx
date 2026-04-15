@@ -57,7 +57,7 @@ export default function MarketOpportunity() {
             ))}
           </div>
           <div className="flex gap-6 mt-4 justify-center">
-            <span className="flex items-center gap-2 text-xs text-muted-foreground"><span className="w-3 h-3 rounded bg-primary" /> Demand</span>
+            <span className="flex items-center gap-2 text-xs text-muted-foreground"><span className="w-3 h-3 rounded bg-deck-coral" /> Demand</span>
             <span className="flex items-center gap-2 text-xs text-muted-foreground"><span className="w-3 h-3 rounded bg-secondary" /> Supply</span>
           </div>
         </div>
