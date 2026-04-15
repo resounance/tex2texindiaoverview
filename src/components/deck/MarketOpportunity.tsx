@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { StaggerContainer, StaggerItem } from "./StaggerChildren";
 
 const bars = [
-  { label: "2021 Demand", value: 8.8, max: 23, color: "bg-primary" },
+  { label: "2021 Demand", value: 8.8, max: 23, color: "bg-deck-coral" },
   { label: "2021 Supply", value: 9.4, max: 23, color: "bg-secondary" },
-  { label: "2026 Demand", value: 23, max: 23, color: "bg-primary" },
+  { label: "2026 Demand", value: 23, max: 23, color: "bg-deck-coral" },
   { label: "2026 Supply", value: 13, max: 23, color: "bg-secondary" },
 ];
 

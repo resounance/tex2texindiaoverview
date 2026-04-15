@@ -149,7 +149,7 @@ export default function WhatIsTex2Tex() {
         {/* Progress dots */}
         <div className="flex justify-center gap-1.5 mt-6">
           {processSteps.map((_, i) => (
-            <motion.button key={i} className={`w-2 h-2 rounded-full transition-colors ${activeStep === i ? "bg-secondary" : "bg-border"}`} onClick={() => { setActiveStep(i); setIsPaused(true); }} whileHover={{ scale: 1.3 }} />
+            <motion.button key={i} className={`w-2 h-2 rounded-full transition-colors ${activeStep === i ? processSteps[i].activeBg : "bg-border"}`} onClick={() => { setActiveStep(i); setIsPaused(true); }} whileHover={{ scale: 1.3 }} />
           ))}
         </div>
       </div>
