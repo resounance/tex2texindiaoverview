@@ -58,9 +58,9 @@ export default function WhatIsTex2Tex() {
                 transition={{ duration: 0.4, delay: i * 0.06 }}
               >
                 <div className={`w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-1.5 transition-colors duration-300 ${
-                  activeStep === i ? "bg-secondary text-white" : "bg-secondary/10"
+                  activeStep === i ? "bg-secondary text-white" : "bg-secondary/10 text-secondary"
                 }`}>
-                  <span className={`font-mono text-xs font-bold ${activeStep === i ? "" : "text-primary"}`}>{i + 1}</span>
+                  <s.icon className="w-3.5 h-3.5" />
                 </div>
                 <h3 className="font-semibold text-xs text-foreground leading-tight">{s.label}</h3>
               </motion.button>
