@@ -113,12 +113,12 @@ export default function WhatIsTex2Tex() {
                   <div className="flex flex-col items-center shrink-0">
                     <motion.div
                       className={`w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isActive ? "bg-secondary text-white shadow-md shadow-secondary/20" : "bg-secondary/10"
+                        isActive ? "bg-secondary text-white shadow-md shadow-secondary/20" : "bg-secondary/10 text-secondary"
                       }`}
                       animate={isActive ? { scale: [1, 1.1, 1] } : {}}
                       transition={{ duration: 0.4 }}
                     >
-                      <span className={`font-mono text-[10px] font-bold ${isActive ? "" : "text-secondary"}`}>{i + 1}</span>
+                      <s.icon className="w-3.5 h-3.5" />
                     </motion.div>
                     {i < processSteps.length - 1 && (
                       <div className={`w-0.5 h-full min-h-[16px] transition-colors duration-300 ${isActive ? "bg-secondary/40" : "bg-border"}`} />
