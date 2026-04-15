@@ -73,7 +73,7 @@ export default function HeroCover() {
           className="font-black uppercase text-white leading-[0.95] tracking-tight"
           style={{ fontSize: "clamp(1.5rem, 5vw, 4.5rem)" }}
         >
-          <span className="block">India Greenfield</span>
+          <span className="block">India International Expansion</span>
           <span className="block">Polyester Textile-to-Textile</span>
           <span className="block">Recycling Facility</span>
         </motion.h1>
