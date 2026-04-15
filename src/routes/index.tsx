@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Tex2Tex® — India Greenfield Polyester Recycling Facility" },
-      { name: "description", content: "Investor deck for Tex2Tex® by Earth Protex™ — the world's first large-scale textile-to-textile polyester recycling facility in India." },
+      { name: "description", content: "Investor deck for Tex2Tex® by Earth Protex™. India's first large-scale textile-to-textile polyester recycling facility, achieving economies of scale." },
       { property: "og:title", content: "Tex2Tex® — India Greenfield Polyester Recycling Facility" },
       { property: "og:description", content: "30,000T/yr textile-to-textile recycling. Cost competitive. Lowest impact polyester. 100% from textile waste." },
     ],

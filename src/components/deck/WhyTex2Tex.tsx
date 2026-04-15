@@ -7,7 +7,7 @@ const advantages = [
   {
     icon: Factory,
     title: "30,000T/yr Large Scale Production",
-    desc: "One of the world's largest dedicated textile-to-textile polyester recycling facilities, enabling economies of scale and reliable supply for global brands.",
+    desc: "India's first dedicated large-scale textile-to-textile polyester recycling facility, achieving economies of scale and reliable supply for global brands.",
   },
   {
     icon: DollarSign,

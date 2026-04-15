@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <img src={tex2texLogo} alt="Tex2Tex® by Earth Protex™" className="h-8 mb-3 brightness-0 invert opacity-80" />
             <p className="text-xs text-muted-foreground leading-relaxed">
-              The world's first large-scale, true textile-to-textile polyester recycling facility. Gujarat, India.
+              India's first large-scale, true textile-to-textile polyester recycling facility. Gujarat, India.
             </p>
           </div>
 

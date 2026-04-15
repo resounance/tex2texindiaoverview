@@ -84,7 +84,7 @@ export default function HeroCover() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="text-white/50 text-xs sm:text-sm md:text-base max-w-lg mt-6 sm:mt-8 leading-relaxed font-light tracking-wide px-4 sm:px-0"
         >
-          The world's first large-scale, true textile-to-textile polyester recycling facility
+          India's first large-scale, true textile-to-textile polyester recycling facility
         </motion.p>
 
         <motion.div
