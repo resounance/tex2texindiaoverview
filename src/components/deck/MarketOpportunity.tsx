@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { StaggerContainer, StaggerItem } from "./StaggerChildren";
 
 const bars = [
-  { label: "2021 Demand", value: 8.8, max: 23, color: "bg-primary" },
+  { label: "2021 Demand", value: 8.8, max: 23, color: "bg-deck-coral" },
   { label: "2021 Supply", value: 9.4, max: 23, color: "bg-secondary" },
-  { label: "2026 Demand", value: 23, max: 23, color: "bg-primary" },
+  { label: "2026 Demand", value: 23, max: 23, color: "bg-deck-coral" },
   { label: "2026 Supply", value: 13, max: 23, color: "bg-secondary" },
 ];
 
@@ -57,7 +57,7 @@ export default function MarketOpportunity() {
             ))}
           </div>
           <div className="flex gap-6 mt-4 justify-center">
-            <span className="flex items-center gap-2 text-xs text-muted-foreground"><span className="w-3 h-3 rounded bg-primary" /> Demand</span>
+            <span className="flex items-center gap-2 text-xs text-muted-foreground"><span className="w-3 h-3 rounded bg-deck-coral" /> Demand</span>
             <span className="flex items-center gap-2 text-xs text-muted-foreground"><span className="w-3 h-3 rounded bg-secondary" /> Supply</span>
           </div>
         </div>

@@ -3,14 +3,14 @@ import { ArrowRight, ChevronDown, Truck, ScanLine, Scissors, Flame, Sparkles, Fi
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const processSteps: { label: string; desc: string; detail: string; icon: LucideIcon }[] = [
-  { icon: Truck, label: "Collection", desc: "Textile waste sourcing", detail: "Post-consumer and post-industrial textile waste is collected from garment factories, sorting centers, and municipal waste streams across India." },
-  { icon: ScanLine, label: "Sorting", desc: "Fiber identification", detail: "Advanced NIR (Near-Infrared) sorting technology identifies polyester-rich textiles, separating them by fiber composition and color for optimal processing." },
-  { icon: Scissors, label: "Shredding", desc: "Mechanical processing", detail: "Sorted textiles are mechanically shredded into small flakes, removing hardware (buttons, zippers) and non-polyester contaminants." },
-  { icon: Flame, label: "Melting", desc: "Thermal processing", detail: "Shredded polyester flakes are melted at controlled temperatures, creating a homogeneous polymer melt ready for purification." },
-  { icon: Sparkles, label: "Gen II TMR™", desc: "Proprietary purification", detail: "Our proprietary Thermo-Mechanical Recycling technology removes dyes, coatings, and micro-contaminants, producing virgin-equivalent polymer quality." },
-  { icon: Filter, label: "Filtration", desc: "Quality assurance", detail: "Multi-stage filtration removes remaining micro-particles, ensuring consistent IV (Intrinsic Viscosity) and color specifications for downstream use." },
-  { icon: CircleDot, label: "Pelletization", desc: "Final product", detail: "Purified polymer is extruded and pelletized into rPET chips, ready for fiber spinning, yarn production, or direct fabric manufacturing." },
+const processSteps: { label: string; desc: string; detail: string; icon: LucideIcon; color: string; activeBg: string }[] = [
+  { icon: Truck, label: "Collection", desc: "Textile waste sourcing", detail: "Post-consumer and post-industrial textile waste is collected from garment factories, sorting centers, and municipal waste streams across India.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
+  { icon: ScanLine, label: "Sorting", desc: "Fiber identification", detail: "Advanced NIR (Near-Infrared) sorting technology identifies polyester-rich textiles, separating them by fiber composition and color for optimal processing.", color: "text-secondary", activeBg: "bg-secondary" },
+  { icon: Scissors, label: "Shredding", desc: "Mechanical processing", detail: "Sorted textiles are mechanically shredded into small flakes, removing hardware (buttons, zippers) and non-polyester contaminants.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
+  { icon: Flame, label: "Melting", desc: "Thermal processing", detail: "Shredded polyester flakes are melted at controlled temperatures, creating a homogeneous polymer melt ready for purification.", color: "text-secondary", activeBg: "bg-secondary" },
+  { icon: Sparkles, label: "Gen II TMR™", desc: "Proprietary purification", detail: "Our proprietary Thermo-Mechanical Recycling technology removes dyes, coatings, and micro-contaminants, producing virgin-equivalent polymer quality.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
+  { icon: Filter, label: "Filtration", desc: "Quality assurance", detail: "Multi-stage filtration removes remaining micro-particles, ensuring consistent IV (Intrinsic Viscosity) and color specifications for downstream use.", color: "text-secondary", activeBg: "bg-secondary" },
+  { icon: CircleDot, label: "Pelletization", desc: "Final product", detail: "Purified polymer is extruded and pelletized into rPET chips, ready for fiber spinning, yarn production, or direct fabric manufacturing.", color: "text-deck-coral", activeBg: "bg-deck-coral" },
 ];
 
 export default function WhatIsTex2Tex() {
@@ -58,7 +58,7 @@ export default function WhatIsTex2Tex() {
                 transition={{ duration: 0.4, delay: i * 0.06 }}
               >
                 <div className={`w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-1.5 transition-colors duration-300 ${
-                  activeStep === i ? "bg-secondary text-white" : "bg-secondary/10 text-secondary"
+                  activeStep === i ? `${s.activeBg} text-white` : `${s.activeBg}/10 ${s.color}`
                 }`}>
                   <s.icon className="w-3.5 h-3.5" />
                 </div>
@@ -113,7 +113,7 @@ export default function WhatIsTex2Tex() {
                   <div className="flex flex-col items-center shrink-0">
                     <motion.div
                       className={`w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isActive ? "bg-secondary text-white shadow-md shadow-secondary/20" : "bg-secondary/10 text-secondary"
+                        isActive ? `${s.activeBg} text-white shadow-md` : `${s.activeBg}/10 ${s.color}`
                       }`}
                       animate={isActive ? { scale: [1, 1.1, 1] } : {}}
                       transition={{ duration: 0.4 }}
@@ -121,7 +121,7 @@ export default function WhatIsTex2Tex() {
                       <s.icon className="w-3.5 h-3.5" />
                     </motion.div>
                     {i < processSteps.length - 1 && (
-                      <div className={`w-0.5 h-full min-h-[16px] transition-colors duration-300 ${isActive ? "bg-secondary/40" : "bg-border"}`} />
+                      <div className={`w-0.5 h-full min-h-[16px] transition-colors duration-300 ${isActive ? `${s.activeBg}/40` : "bg-border"}`} />
                     )}
                   </div>
                   <div className="flex-1 pb-2">
@@ -149,7 +149,7 @@ export default function WhatIsTex2Tex() {
         {/* Progress dots */}
         <div className="flex justify-center gap-1.5 mt-6">
           {processSteps.map((_, i) => (
-            <motion.button key={i} className={`w-2 h-2 rounded-full transition-colors ${activeStep === i ? "bg-secondary" : "bg-border"}`} onClick={() => { setActiveStep(i); setIsPaused(true); }} whileHover={{ scale: 1.3 }} />
+            <motion.button key={i} className={`w-2 h-2 rounded-full transition-colors ${activeStep === i ? processSteps[i].activeBg : "bg-border"}`} onClick={() => { setActiveStep(i); setIsPaused(true); }} whileHover={{ scale: 1.3 }} />
           ))}
         </div>
       </div>

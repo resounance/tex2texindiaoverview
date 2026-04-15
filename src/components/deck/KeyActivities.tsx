@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { StaggerContainer, StaggerItem } from "./StaggerChildren";
 
 const activities = [
-  { icon: Cpu, title: "Technology", desc: "Proprietary Gen II TMR™ thermo-mechanical recycling system with advanced filtration, delivering virgin-equivalent polymer quality from 100% textile waste feedstock." },
-  { icon: Factory, title: "Manufacturing", desc: "30,000 T/yr capacity greenfield facility in Gujarat, India — strategically located near India's largest textile waste aggregation hubs and port access." },
-  { icon: Megaphone, title: "Marketing", desc: "Direct partnerships with global workwear, sportswear, and fashion brands seeking verified textile-to-textile recycled polyester for their sustainability commitments." },
-  { icon: Building2, title: "Greenfield Development", desc: "Full EPC management, equipment procurement, and facility construction on schedule for Q4 2026 commissioning with phased capacity ramp-up." },
+  { icon: Cpu, title: "Technology", desc: "Proprietary Gen II TMR™ thermo-mechanical recycling system with advanced filtration, delivering virgin-equivalent polymer quality from 100% textile waste feedstock.", color: "text-deck-coral", bg: "bg-deck-coral/10" },
+  { icon: Factory, title: "Manufacturing", desc: "30,000 T/yr capacity greenfield facility in Gujarat, India — strategically located near India's largest textile waste aggregation hubs and port access.", color: "text-secondary", bg: "bg-secondary/10" },
+  { icon: Megaphone, title: "Marketing", desc: "Direct partnerships with global workwear, sportswear, and fashion brands seeking verified textile-to-textile recycled polyester for their sustainability commitments.", color: "text-deck-coral", bg: "bg-deck-coral/10" },
+  { icon: Building2, title: "Greenfield Development", desc: "Full EPC management, equipment procurement, and facility construction on schedule for Q4 2026 commissioning with phased capacity ramp-up.", color: "text-secondary", bg: "bg-secondary/10" },
 ];
 
 export default function KeyActivities() {
@@ -26,13 +26,13 @@ export default function KeyActivities() {
               transition={{ duration: 0.2 }}
             >
               <motion.div
-                className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0"
+                className={`w-12 h-12 rounded-lg ${a.bg} flex items-center justify-center shrink-0`}
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.2 }}
               >
-                <a.icon className="w-6 h-6 text-secondary" />
+                <a.icon className={`w-6 h-6 ${a.color}`} />
               </motion.div>
               <div>
                 <h3 className="font-semibold text-lg text-foreground mb-1">{a.title}</h3>
