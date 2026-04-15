@@ -5,10 +5,10 @@ import { Trash2, FlaskConical, Recycle, TrendingUp } from "lucide-react";
 import AnimatedCounter from "./AnimatedCounter";
 
 const problems = [
-  { icon: Trash2, stat: 8, suffix: "M tons", title: "Annual Textile Waste", desc: "India generates over 8 million tons of textile waste annually, and most of it ends up in landfills or is incinerated." },
-  { icon: Recycle, stat: 41, suffix: "%", title: "Polyester Content", desc: "41% of all textiles produced globally are polyester, the single largest fiber category." },
-  { icon: FlaskConical, stat: 86, suffix: "%", title: "Virgin Polyester", desc: "86% of all polyester is still made from virgin petroleum, resulting in a massive carbon footprint." },
-  { icon: TrendingUp, stat: 10, suffix: "M ton", title: "rPET Shortage by 2030", desc: "The recycled polyester market faces a projected 10M ton supply gap by 2030." },
+  { icon: Trash2, stat: 8, suffix: "M tons", title: "Annual Textile Waste", desc: "India generates over 8 million tons of textile waste annually, and most of it ends up in landfills or is incinerated.", color: "text-deck-coral" },
+  { icon: Recycle, stat: 41, suffix: "%", title: "Polyester Content", desc: "41% of all textiles produced globally are polyester, the single largest fiber category.", color: "text-secondary" },
+  { icon: FlaskConical, stat: 86, suffix: "%", title: "Virgin Polyester", desc: "86% of all polyester is still made from virgin petroleum, resulting in a massive carbon footprint.", color: "text-deck-coral" },
+  { icon: TrendingUp, stat: 10, suffix: "M ton", title: "rPET Shortage by 2030", desc: "The recycled polyester market faces a projected 10M ton supply gap by 2030.", color: "text-secondary" },
 ];
 
 export default function TheProblem() {
@@ -33,7 +33,7 @@ export default function TheProblem() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                  <p.icon className="w-6 h-6 text-secondary mb-3" />
+                  <p.icon className={`w-6 h-6 ${p.color} mb-3`} />
                 </motion.div>
                 <AnimatedCounter value={p.stat} suffix={p.suffix} decimals={0} className="deck-stat text-2xl text-primary" />
                 <h3 className="text-sm font-bold text-foreground mt-2 mb-2">{p.title}</h3>

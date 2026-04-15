@@ -8,21 +8,29 @@ const advantages = [
     icon: Factory,
     title: "30,000T/yr Large Scale Production",
     desc: "India's first dedicated large-scale textile-to-textile polyester recycling facility, achieving economies of scale and reliable supply for global brands.",
+    color: "text-deck-coral",
+    bg: "bg-deck-coral/10",
   },
   {
     icon: DollarSign,
     title: "Cost Competitive with Commodity Polyester",
     desc: "Our TMR™ process delivers recycled polyester at price parity with virgin commodity polyester, eliminating the green premium barrier.",
+    color: "text-secondary",
+    bg: "bg-secondary/10",
   },
   {
     icon: Leaf,
     title: "Lowest Impact Polyester in the Marketplace",
     desc: "Independently verified by 3rd party Life Cycle Assessment (LCA). Our Tex2Tex® pellets have the lowest environmental footprint of any polyester on the market.",
+    color: "text-deck-coral",
+    bg: "bg-deck-coral/10",
   },
   {
     icon: Recycle,
     title: "Closing the Loop: 100% from Textile Waste",
     desc: "No virgin material or bottle flake inputs. 100% sourced from post-consumer and post-industrial textile waste, enabling true circular textile-to-textile recycling.",
+    color: "text-secondary",
+    bg: "bg-secondary/10",
   },
 ];
 
@@ -42,13 +50,13 @@ export default function WhyTex2Tex() {
               transition={{ duration: 0.2 }}
             >
               <motion.div
-                className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0"
+                className={`w-12 h-12 rounded-lg ${a.bg} flex items-center justify-center shrink-0`}
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.2 }}
               >
-                <a.icon className="w-6 h-6 text-secondary" />
+                <a.icon className={`w-6 h-6 ${a.color}`} />
               </motion.div>
               <div>
                 <h3 className="font-semibold text-lg text-foreground mb-1">{a.title}</h3>
