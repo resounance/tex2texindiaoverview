@@ -58,7 +58,7 @@ export default function WhatIsTex2Tex() {
                 transition={{ duration: 0.4, delay: i * 0.06 }}
               >
                 <div className={`w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-1.5 transition-colors duration-300 ${
-                  activeStep === i ? "bg-secondary text-white" : "bg-secondary/10 text-secondary"
+                  activeStep === i ? `${s.activeBg} text-white` : `${s.activeBg}/10 ${s.color}`
                 }`}>
                   <s.icon className="w-3.5 h-3.5" />
                 </div>
