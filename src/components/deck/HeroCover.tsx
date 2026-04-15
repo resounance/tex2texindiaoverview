@@ -115,7 +115,7 @@ export default function HeroCover() {
             href="#why-tex2tex"
             className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors duration-300 border-b border-white/20 pb-1 hover:border-white/50"
           >
-            Explore the deck
+            Explore the overview
           </a>
         </motion.div>
       </motion.div>
