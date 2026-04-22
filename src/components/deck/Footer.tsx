@@ -5,25 +5,6 @@ export default function Footer() {
   return (
     <footer className="bg-card border-t border-border">
       <div className="max-w-5xl mx-auto px-6 py-12">
-        <div className="mb-10 flex flex-col items-center text-center gap-4 pb-10 border-b border-border">
-          <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
-            Request a private project briefing
-          </h3>
-          <p className="text-sm text-muted-foreground max-w-md">
-            Schedule a confidential meeting with the Tex2Tex® team to discuss the India greenfield opportunity.
-          </p>
-          <a
-            href="https://bookings.cloud.microsoft/book/Tex2TexIndiaGreenfieldIntro@earthprotex.com/?ismsaljsauthenabled"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors px-6 py-3 rounded-md text-sm font-medium shadow-sm"
-          >
-            <Calendar className="w-4 h-4" />
-            Schedule a briefing
-            <ExternalLink className="w-3.5 h-3.5 opacity-70" />
-          </a>
-        </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
           <div>
             <img src={tex2texLogo} alt="Tex2Tex® by Earth Protex™" className="h-8 mb-3 brightness-0 invert opacity-80" />
