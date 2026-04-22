@@ -24,7 +24,7 @@ export default function ScheduleBriefing() {
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-2.5 text-xs text-muted-foreground">
                 <Clock className="w-3.5 h-3.5 mt-0.5 text-primary shrink-0" />
-                <span>30–45 minute introductory call</span>
+                <span>30 min – 1 hr introductory call</span>
               </li>
               <li className="flex items-start gap-2.5 text-xs text-muted-foreground">
                 <Shield className="w-3.5 h-3.5 mt-0.5 text-primary shrink-0" />
