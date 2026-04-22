@@ -1,4 +1,4 @@
-import { ExternalLink, Calendar } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import tex2texLogo from "@/assets/tex2tex-logo.svg";
 
 export default function Footer() {
